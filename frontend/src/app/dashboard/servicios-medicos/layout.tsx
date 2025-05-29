@@ -5,11 +5,15 @@ import { useAuth } from "@/components/AuthProvider";
 import { AccessDeniedMessage } from "@/components/AccessDeniedMessage";
 
 /**
- * Layout específico para el departamento de Servicios Médicos
+     departamento de Servicios Médicos
  * - Verifica que el usuario pertenezca al departamento de Servicios Médicos
  * - Muestra mensaje de acceso denegado si no tiene permisos
  */
-export default function ServiciosMedicosLayout({ children }: { children: ReactNode }) {
+export default function ServiciosMedicosLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   const { userData, loading } = useAuth();
   const [verifyingAccess, setVerifyingAccess] = useState(true);
 
@@ -32,15 +36,12 @@ export default function ServiciosMedicosLayout({ children }: { children: ReactNo
   }
 
   // Si no tiene permisos, mostrar mensaje de acceso denegado
-  if (userData?.department !== 'servicios-medicos') {
+  if (userData?.department !== "servicios-medicos") {
     return (
-      <AccessDeniedMessage 
-        message="No tiene permisos para acceder al área de Servicios Médicos. Esta sección está restringida al personal del departamento de Servicios Médicos."
-      />
+      <AccessDeniedMessage message="No tiene permisos para acceder al área de Servicios Médicos. Esta sección está restringida al personal del departamento de Servicios Médicos." />
     );
   }
 
   // Usuario del departamento correcto: mostrar contenido
   return <>{children}</>;
 }
-

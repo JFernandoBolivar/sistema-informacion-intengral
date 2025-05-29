@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function OACPage() {
-  // Temporary role state - in production this would come from auth
   const [userRole, setUserRole] = useState<"admin" | "basic">("basic");
 
   const toggleRole = () => {
@@ -20,7 +19,6 @@ export default function OACPage() {
         <CardHeader>
           <CardTitle className="flex justify-between items-center">
             <span>Oficina de Atención al Ciudadano (OAC)</span>
-            {/* Temporary role switcher - remove in production */}
           </CardTitle>
         </CardHeader>
         <CardContent>

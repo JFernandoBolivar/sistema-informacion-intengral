@@ -6,7 +6,7 @@ import { useAuth } from "@/components/AuthProvider";
 import { AccessDeniedMessage } from "@/components/AccessDeniedMessage";
 import { Sidebar } from "@/components/navigation/Sidebar";
 /**
- * Layout específico para el departamento OAC
+
  * - Verifica que el usuario pertenezca al departamento OAC
  * - Muestra mensaje de acceso denegado si no tiene permisos
  */

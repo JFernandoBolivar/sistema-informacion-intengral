@@ -8,13 +8,8 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
-/**
- * Layout base para todas las rutas bajo /dashboard
- * - Incluye navegación sidebar responsive
- * - Valida autenticación básica
- * - Mantiene estructura flex consistente
- * - Se hereda automáticamente por todas las rutas anidadas
- */
+//  Layout base para todas las rutas bajo /dashboard
+
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { isLoggedIn, loading } = useAuth();
   const router = useRouter();
