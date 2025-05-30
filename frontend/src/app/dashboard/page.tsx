@@ -68,6 +68,16 @@ const departments: Department[] = [
     alt: "Imagen de almacén con suministros",
     departmentKey: "almacen",
   },
+  {
+    id: "employee",
+    name: "Datos",
+
+    imageSrc: "/images/departments/datos.jpeg",
+    href: "/dashboard/rac/employee/entry",
+    color: "bg-amber-50 dark:bg-amber-950",
+    alt: "Imagen de almacén con suministros",
+    departmentKey: "oac",
+  },
 ];
 
 // Componente para el dashboard
